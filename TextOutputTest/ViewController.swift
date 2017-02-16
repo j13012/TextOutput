@@ -18,16 +18,20 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
+        //ボタンアクション時のターゲットを設定
         btn.addTarget(self, action: #selector(buttonTapped(sender: )), for: .touchDown)
         
+        //ビューに追加
         self.view.addSubview(textField)
         self.view.addSubview(btn)
         self.view.addSubview(label)
     }
     
     @IBAction func buttonTapped(sender: UIButton){
+        //テキストフィールドの値を取得
         value = textField.text!
         
+        //ラベルにテキストフィールドの値を設定
         label.text = value
     }
 
